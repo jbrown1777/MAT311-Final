@@ -6,21 +6,21 @@ MAT311-Final
 |   │   Final_Notebook.ipynb
 └───src/
 │   └───data/
-│       │   file111.txt
-│       │   file111.txt
-│       │   file111.txt
+│       │   helper_functions.py
+│       │   load_data.py
+│       │   process_data.py
 │   └───models/
 │       └───decision_tree/
-│           │   file111.txt
-│           │   file111.txt
+│           │   training_decision_tree.py
+│           │   validation_decision_tree.py
 │       └───knn/
-│           │   file111.txt
-│           │   file111.txt
+│           │   training_knn.py
+│           │   validation_knn.py
 │       └───naive_bayes/
-│           │   file111.txt
-│           │   file111.txt
+│           │   training_naive_bayes.py
+│           │   validation_naive_bayes.py
 │   └───testing/
-|       │   file021.txt
-|       │   file022.txt
+|       │   roc_auc.py
+|       │   testing_knn.py
 |   main.py
 ```
