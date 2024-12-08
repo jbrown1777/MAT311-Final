@@ -6,14 +6,10 @@ MAT311-Final <br>
 |- src/
 |  |- data/
 |     |-load_data.py<br>
-project
-│   README.md
-│   file001.txt    
-│
-└───folder1/
-│   │   file011.txt
-│   │   file012.txt
-│   │
+```
+MAT311-Final
+└───data/
+│   │   Autism_Screening_Adult.xlsx
 │   └───subfolder1
 │       │   file111.txt
 │       │   file112.txt
