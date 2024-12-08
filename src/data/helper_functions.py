@@ -1,4 +1,6 @@
-from sklearn.metrics import confusion_matrix, accuracy_score, precision_score, recall_score, f1_score
+from sklearn.metrics import confusion_matrix, accuracy_score, precision_score, recall_score, f1_score, roc_curve, roc_auc_score
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 def specificity_score(y_true, y_pred_model):
     # Separate Confusion Matrix for Specificity Value
@@ -17,9 +19,12 @@ def printConfusionMatrix(y_true, y_pred_model, model, status):
     plt.show()
     print()
     
-def printResults(y_true, y_pred_model):
+def printResults(y_true, y_pred_model, model):
+    print(f'Model: {model}')
+    print()
     print(f'Accuracy: {accuracy_score(y_true, y_pred_model)}')
     print(f'Precision: {precision_score(y_true, y_pred_model)}')
     print(f'Recall: {recall_score(y_true, y_pred_model)}')
     print(f'Specificity: {specificity_score(y_true, y_pred_model)}')
     print(f'F1-Score: {f1_score(y_true, y_pred_model)}')
+    print()
