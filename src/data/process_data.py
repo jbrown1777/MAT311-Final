@@ -1,18 +1,15 @@
-import numpy as np
-from sklearn.model_selection import train_test_split # make training & testing data
+from sklearn.tree import DecisionTreeClassifier, plot_tree
 
-def process_data(autism):
-    X = autism.drop(columns=['Age','Result','Class/ASD'])
-    y = autism['Class/ASD']
+def train_tree(X_train,y_train,X_val):
+    features = X_train.columns
+    depth_limit = None
 
-    ### Separate Training, Validation, and Test Data ###
-    seed=np.random.seed(123)
+    decision_tree = DecisionTreeClassifier(criterion='entropy', max_depth=depth_limit)
 
-    # Set up the Test Data
-    #global X_train, X_val, X_test,y_train,  y_val, y_test
-    X_val, X_test, y_val, y_test = train_test_split(X, y, test_size=141) #140 rows is 20% of the autism dataframe; we added one to leave 560 rows left 
+    # Fit the model
+    decision_tree.fit(X_train[features], y_train)
 
-    # Set up Training and Validation Data
-    X_train, X_val, y_train, y_val = train_test_split(X_val, y_val, test_size=140) # 140 rows is 20% of the autism dataframe
+    # Predict on validation data
+    y_pred_val_decision_tree = decision_tree.predict(X_val[features])
 
-    return X_train, X_val, X_test, y_train, y_val, y_test
+    return decision_tree,y_pred_val_decision_tree,features,depth_limit
