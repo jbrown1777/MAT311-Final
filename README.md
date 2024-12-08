@@ -1,5 +1,5 @@
 ```
-MAT311-Final
+MAT311-Final/
 ├───data/
 │   └───Autism_Screening_Adult.xlsx
 ├───notebooks/
