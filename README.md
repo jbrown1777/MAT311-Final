@@ -3,7 +3,7 @@ MAT311-Final
 └───data/
 │   │   Autism_Screening_Adult.xlsx
 └───notebooks/
-    │   Final_Notebook.ipynb
+|   │   Final_Notebook.ipynb
 └───src/
 │   └───data/
 │       │   file111.txt
@@ -20,6 +20,7 @@ MAT311-Final
 │           │   file111.txt
 │           │   file111.txt
 │   └───testing/
-    │   file021.txt
-    │   file022.txt
+|       │   file021.txt
+|       │   file022.txt
+|   main.py
 ```
